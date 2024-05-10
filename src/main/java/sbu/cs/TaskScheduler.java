@@ -60,6 +60,7 @@ public class TaskScheduler
         for(int i=0;i<tasks.size();i++){
             try {
                 Thread thread=new Thread(tasks.get(i));
+                thread.start();
                 thread.join();
                 finishedTasks.add(tasks.get(i).taskName);
             }
